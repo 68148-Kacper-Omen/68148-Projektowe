@@ -29,6 +29,7 @@ section {
     color: hsla(0, 20%, 92%, 1);
     padding: 40px 0;
     border-bottom: 4px solid hsla(0, 35%, 12%, 1);
+    position: relative;
 }
 
 #about {
@@ -153,6 +154,41 @@ footer {
     color: hsla(0, 20%, 92%, 1)
 }
 
+#change-color {
+    height: 35px;
+    width: 70px;
+    background-color: #ff3939;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: solid 3px #791919;
+    border-radius: 15px;
+    z-index: 1000;
+    cursor: pointer;
+
+}
+
+#slider {
+    background-color: white;
+    height: 80%;
+    width: 40%;
+    border-radius: 50%;
+    transition: 0.33s;
+}
+
+#hideOrShowSection {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 24px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    border: solid 2px white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
     #skills ol {
         display: flex;
@@ -182,28 +218,6 @@ footer {
     #cv_photo {
         width: 50%;
     }
-}
-
-#change-color {
-    height: 35px;
-    width: 70px;
-    background-color: #ff3939;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    border: solid 3px #791919;
-    border-radius: 15px;
-    z-index: 1000;
-    cursor: pointer;
-
-}
-
-#slider {
-    background-color: white;
-    height: 80%;
-    width: 40%;
-    border-radius: 50%;
-    transition: 0.33s;
 }
 
 @media (min-width: 1024px) {
