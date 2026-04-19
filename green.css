@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsla(160, 30%, 12%, 1);
+}
+
+h1 {
+    font-size: 42px;
+    color: hsla(120, 15%, 92%, 1);
+}
+
+header h3 {
+    font-size: 20px;
+    color: hsla(120, 10%, 70%, 1);
+}
+
+section {
+    font-family: 'Lato', sans-serif;
+    background-color: hsla(160, 25%, 18%, 1);
+    color: hsla(120, 15%, 92%, 1);
+    padding: 20px 0;
+    border-bottom: 4px solid hsla(160, 30%, 12%, 1);
+}
+
+#about {
+    text-align: center;
+}
+
+#info_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.6;
+    margin: 0 10px;
+}
+
+#cv_photo {
+    width: 90%;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+h2 {
+    color: hsla(45, 90%, 65%, 1);
+    font-size: 38px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: hsla(120, 15%, 92%, 1);
+}
+
+#skills ol {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    font-size: 32px;
+    font-weight: 700;
+    width: 100%;
+}
+
+#skills ol li {
+    border-bottom: 4px solid hsla(160, 30%, 12%, 1);
+    padding: 30px 20px;
+    background-color: hsla(160, 30%, 22%, 1);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin: 10px 10px;
+}
+
+#skills ol li:last-child {
+    border-bottom: none;
+}
+
+.skill-image {
+    width: 70%;
+}
+
+#education {
+    text-align: center;
+    line-height: 1.7;
+}
+
+a {
+    color: hsla(120, 10%, 70%, 1);
+    overflow-wrap: break-word;
+}
+
+#projects ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+#projects li:not(:last-child) {
+    border-bottom: 4px dotted hsla(160, 30%, 12%, 1);
+}
+
+#experience {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#experience h3, p {
+    font-size: 22px;
+}
+
+#experience article:first-of-type {
+    border-bottom: 4px dotted hsla(160, 30%, 12%, 1);
+}
+
+#experience article:last-child p {
+    margin-bottom: 0;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact div {
+    font-size: 20px;
+    line-height: 1.8;
+    
+}
+
+#contact a {
+    color: hsla(120, 15%, 92%, 1);
+}
+
+footer {
+    color: hsla(120, 15%, 92%, 1);
+}
+
+@media (min-width: 768px) {
+    #skills ol {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #skills ol li {
+        border: none;
+        width: calc(50% - 50px);
+    }
+
+    #info_container {
+        flex-direction: row;
+        width: 700px;
+        margin: 0 auto;
+        gap: 30px;
+    }
+
+    #info_container p {
+        text-align: left;
+        font-size: 26px;
+        width: 50%;
+    }
+
+    #cv_photo {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #projects li, #experience article {
+        width: 70%;
+        margin: 15px auto;
+    }
+
+    #experience h3, p {
+        font-size: 26px;
+    }
+
+    #info_container {
+        width: 1000px;
+    }
+
+    #info_container p {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1440px) {
+    #skills ol li {
+        width: calc(25% - 50px)
+    }
+
+    #projects li, #experience article {
+        width: 50%;
+        margin: 15px auto;
+    }
+
+    #experience h3, p {
+        font-size: 30px;
+    }
+}
