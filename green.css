@@ -147,6 +147,26 @@ footer {
     color: hsla(120, 15%, 92%, 1);
 }
 
+#change-color {
+    height: 35px;
+    width: 70px;
+    background-color: #8f8f8f;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: solid 5px #000000;
+    border-radius: 15px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#change-color div {
+    background-color: white;
+    height: 80%;
+    width: 40%;
+    border-radius: 50%;
+}
+
 @media (min-width: 768px) {
     #skills ol {
         display: flex;

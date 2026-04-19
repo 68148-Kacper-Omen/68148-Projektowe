@@ -204,8 +204,6 @@ footer {
     border-radius: 50%;
 }
 
-
-
 @media (min-width: 1024px) {
     #projects li, #experience article {
         width: 70%;
