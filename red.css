@@ -247,6 +247,13 @@ form button:hover {
     background-color: #661414;
 }
 
+.error {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff3939;
+    margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
     #skills ol {
         display: flex;

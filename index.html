@@ -141,20 +141,24 @@
             </div>
 
             <!-- Formularz -->
-            <form>
+            <form id="messageForm" novalidate>
                 <h4>Wyślij mi wiadomość!</h1>
 
                 <label for="name">Imię</label>
                 <input type="text" id="name">
+                <span class="error" id="nameError"></span>
 
                 <label for="surname">Nazwisko</label>
                 <input type="text" id="surname">
+                <span class="error" id="surnameError"></span>
 
                 <label for="email">Email</label>
                 <input type="email" id="email">
+                <span class="error" id="emailError"></span>
 
                 <label for="message">Wiadomość</label>
                 <textarea id="message" rows="10"></textarea>
+                <span class="error" id="messageError"></span>
 
                 <button type="submit">Wyślij wiadomość</button>
             </form>
