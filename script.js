@@ -146,11 +146,20 @@ const notesList = document.getElementById("notes-list")
 const notes = JSON.parse(localStorage.getItem("notes")) || []
 
 const renderNotes = () => {
-    notes.forEach(note => {
+    notesList.innerHTML = ""
+
+    notes.forEach((note, index) => {
         const li = document.createElement("li")
         li.innerHTML = `<p>${note}</p>`
 
+        const deleteBtn = document.createElement("button")
+        deleteBtn.innerHTML = "Usuń notatkę"
+        deleteBtn.addEventListener("click", () => {
+            deleteNote(index)
+        })
+
         notesList.appendChild(li)
+        li.appendChild(deleteBtn)
     })
 }
 
@@ -159,5 +168,12 @@ addNoteBtn.addEventListener("click", () => {
     localStorage.setItem("notes", JSON.stringify(notes))
     renderNotes()
 })
+
+const deleteNote = (index) => {
+    notes.splice(index, 1)
+    localStorage.setItem("notes", JSON.stringify(notes))
+    alert("Notatka usunięta")
+    renderNotes()
+}
 
 renderNotes()
