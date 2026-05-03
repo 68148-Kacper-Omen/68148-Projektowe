@@ -25,9 +25,9 @@ function hideOrShowSection() {
     }
 }
 
-// Walidacja formularza
+// Walidacja oraz wysłanie formularza
 const form = document.getElementById("messageForm")
-
+const url = "https://cv-68148-backend.onrender.com"
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     const name = document.getElementById("name")
@@ -90,12 +90,29 @@ form.addEventListener("submit", (e) => {
         messageError.textContent = ""
     }
 
-    console.log(isValid)
     if (isValid) {
-        alert("Wiadomość wysłana!")
-        form.submit()
+        sendMessage(name.value.trim(), surname.value.trim(), email.value.trim(), message.value.trim())
     }
 })
+
+const sendMessage = async (name, surname, email, message) => {
+    try {
+        const response = await fetch(`${url}/api/send-message`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({imie: name, nazwisko: surname, email: email, wiadomosc: message})
+        })
+
+        if (response.ok) {
+            alert("Wiadomość wysłana!")
+        }
+    } catch (error) {
+        console.error(error)
+        alert("Błąd wysyłania wiadomości")
+    }
+}
 
 // Pobieranie danych z data.json
 const fetchData = async () => {
