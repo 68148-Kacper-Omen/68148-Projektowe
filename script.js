@@ -104,8 +104,10 @@ const fetchData = async () => {
         const data = await response.json()
         
         const skills = data.skills
+        const projects = data.projects
 
         const skillsList = document.getElementById('skills-list')
+        const projectsList = document.getElementById('projects-list')
 
         skills.forEach(skill => {
             const li = document.createElement("li")
@@ -116,6 +118,18 @@ const fetchData = async () => {
             `
 
             skillsList.appendChild(li)
+        })
+
+        projects.forEach(project => {
+            const li = document.createElement("li")
+            li.innerHTML = 
+            `
+            <p>${project.description}</p>
+            <p>Link do strony: <a href="${project.websiteUrl} target="_blank" rel="noopener noreferrer">${project.websiteUrl}</a></p>
+            <p>Link do repozytorium na githubie: <a href="${project.githubUrl} target="_blank" rel="noopener noreferrer">${project.githubUrl}</a></p>
+            `
+
+            projectsList.appendChild(li)
         })
     } catch (error) {
         console.error("Błąd pobierania danych", error)
