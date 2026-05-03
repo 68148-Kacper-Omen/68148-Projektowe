@@ -163,9 +163,18 @@ const renderNotes = () => {
     })
 }
 
+const noteError = document.getElementById("noteError")
 addNoteBtn.addEventListener("click", () => {
+    if (noteContent.value.trim() === "") {
+        noteError.textContent = "Nie można dodać pustej notatki"
+        return
+    }
+
     notes.push(noteContent.value.trim())
     localStorage.setItem("notes", JSON.stringify(notes))
+    alert("Notatka dodana")
+    noteError.textContent = ""
+    noteContent.value = ""
     renderNotes()
 })
 
