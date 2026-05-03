@@ -137,3 +137,27 @@ const fetchData = async () => {
 }
 
 fetchData()
+
+// ZAD 7 localStorage
+const addNoteBtn = document.getElementById("add-note")
+const noteContent = document.getElementById("note-content")
+const notesList = document.getElementById("notes-list")
+
+const notes = JSON.parse(localStorage.getItem("notes")) || []
+
+const renderNotes = () => {
+    notes.forEach(note => {
+        const li = document.createElement("li")
+        li.innerHTML = `<p>${note}</p>`
+
+        notesList.appendChild(li)
+    })
+}
+
+addNoteBtn.addEventListener("click", () => {
+    notes.push(noteContent.value.trim())
+    localStorage.setItem("notes", JSON.stringify(notes))
+    renderNotes()
+})
+
+renderNotes()
