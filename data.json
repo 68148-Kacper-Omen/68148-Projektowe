@@ -9,6 +9,10 @@
             "imageSrc": "./images/logos/CSS3.png"
         },
         {
+            "name": "Tailwind CSS",
+            "imageSrc": "./images/logos/tailwindcss.png"
+        },
+        {
             "name": "Javascript",
             "imageSrc": "./images/logos/javascript.png"
         },

@@ -96,3 +96,30 @@ form.addEventListener("submit", (e) => {
         form.submit()
     }
 })
+
+// Pobieranie danych z data.json
+const fetchData = async () => {
+    try {
+        const response = await fetch("./data.json")
+        const data = await response.json()
+        
+        const skills = data.skills
+
+        const skillsList = document.getElementById('skills-list')
+
+        skills.forEach(skill => {
+            const li = document.createElement("li")
+            li.innerHTML = 
+            `
+            <h3>${skill.name}</h3>
+            <img class="skill-image" src="${skill.imageSrc}" alt="${skill.name} logo">
+            `
+
+            skillsList.appendChild(li)
+        })
+    } catch (error) {
+        console.error("Błąd pobierania danych", error)
+    }
+}
+
+fetchData()
