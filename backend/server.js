@@ -2,10 +2,14 @@ import express from 'express'
 import dotenv from 'dotenv'
 
 import connectDB from './db.js'
+import messageRouter from './routes/message.route.js'
 
 dotenv.config()
 
 const app = express()
+app.use(express.json())
+
+app.use("/api", messageRouter)
 
 connectDB()
 
