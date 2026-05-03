@@ -107,6 +107,7 @@ const sendMessage = async (name, surname, email, message) => {
 
         if (response.ok) {
             alert("Wiadomość wysłana!")
+            form.reset()
         }
     } catch (error) {
         console.error(error)
