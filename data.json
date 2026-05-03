@@ -1,0 +1,32 @@
+{
+    "skills": [
+        {
+            "name": "HTML5",
+            "imageSrc": "./images/logos/HTML5.png"
+        },
+        {
+            "name": "CSS3",
+            "imageSrc": "./images/logos/CSS3.png"
+        },
+        {
+            "name": "Javascript",
+            "imageSrc": "./images/logos/javascript.png"
+        },
+        {
+            "name": "React",
+            "imageSrc": "./images/logos/react.png"
+        },
+        {
+            "name": "Node JS",
+            "imageSrc": "./images/logos/nodejs.png"
+        },
+        {
+            "name": "Express JS",
+            "imageSrc": "./images/logos/express.png"
+        },
+        {
+            "name": "MongoDB",
+            "imageSrc": "./images/logos/mongodb.png"
+        }
+    ]
+}
